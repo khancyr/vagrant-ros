@@ -27,6 +27,7 @@ echo "Installing Gazebo8 with ROS binding."
 sudo apt-get -y install gazebo8 ros-kinetic-gazebo8-ros
 
 # Initialize rosdep
+## TODO : fix that. It should be run only once
 sudo rosdep init
 su - vagrant -c 'rosdep update'
 
@@ -36,3 +37,8 @@ echo "source /opt/ros/kinetic/setup.bash" >> /home/vagrant/.bashrc
 # Installing mavros
 echo "Installing Mavros."
 sudo apt-get -y install ros-kinetic-mavros
+
+# Install lubuntu for GUI
+## TODO : look for less dependencies solution
+### desktop-file-utils dmz-cursor-theme fcitx fcitx-config-gtk2 fcitx-frontend-gtk2 fcitx-ui-classic gnome-system-tools gnome-time-admin gvfs-backends indicator-application-gtk2 libfm-modules light-locker light-locker-settings lightdm-gtk-greeter-settings lubuntu-coreg lubuntu-default-session lxappearance  lxappearance-obconf lxinput lxpanel-indicator-applet-plugin lxrandr lxsession-default-apps lxterminal lxtask network-manager-gnome ntp obconf pm-utils xdg-user-dirs vfs-fuse xdg-user-dirs-gtk x11-utils
+sudo apt-get install -y lubuntu-desktop
