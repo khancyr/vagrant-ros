@@ -37,6 +37,9 @@ echo "source /opt/ros/kinetic/setup.bash" >> /home/vagrant/.bashrc
 # Installing mavros
 echo "Installing Mavros."
 sudo apt-get -y install ros-kinetic-mavros
+wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+sudo ./install_geographiclib_datasets.sh
+rm install_geographiclib_datasets.sh
 
 # Install lubuntu for GUI
 ## TODO : look for less dependencies solution
